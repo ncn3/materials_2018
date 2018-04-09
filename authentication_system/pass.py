@@ -21,6 +21,7 @@ def authenticate(username, pass_text, pwdb):
     return False
 
 def add_user(username, password, salt, paswdb, pwdb_file):
+    "checks whether a user already exists and if they don't add them to the database"
     if username in pwdb:
         raise Exception('Unsername already exists [%s]' %username)
     else:
@@ -72,5 +73,3 @@ if __name__ == '__main__':
             add_user(username, password, salt, pwdb, pwdb_file)
         else:
             print('Exit!')
-
-print('hello anton')
