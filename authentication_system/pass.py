@@ -72,3 +72,5 @@ if __name__ == '__main__':
             add_user(username, password, salt, pwdb, pwdb_file)
         else:
             print('Exit!')
+
+print('hello anton')
